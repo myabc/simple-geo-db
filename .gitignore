@@ -1,0 +1,12 @@
+*.rbc
+*.sassc
+.DS_Store
+Gemfile.lock
+.rspec
+/.bundle
+/vendor/bundle
+/log/*
+/tmp/*
+/coverage/
+/spec/tmp/*
+**.orig
