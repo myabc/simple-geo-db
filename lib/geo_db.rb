@@ -2,14 +2,13 @@ module GeoDB
 
   DEFAULT_COUNTRY = 'de'.freeze
   DEFAULT_CONFIG  = {
-    'layer'      => 400200000,
-    'locale'     => 'de',
-    'countryLvl' => 'ld_lvl1',
-    'countries'  => {
-      'de'  => 105,
-      'at'  => 106,
-      'ch'  => 107
-    }.freeze
+    'locale'     => 'de'
+  }.freeze
+
+  SUPPORTED_COUNTRIES = {
+    'de'  => 105,
+    'at'  => 106,
+    'ch'  => 107
   }.freeze
 
   # geodb_locations:
@@ -22,6 +21,8 @@ module GeoDB
     :pol_division         => 100600000,
     :populated_area       => 100700000
   }.freeze
+
+  LAYER = 400200000
 
   # geodb_textdata
   TEXT_DATA = {

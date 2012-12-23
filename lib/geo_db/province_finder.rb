@@ -7,9 +7,9 @@ module GeoDB
     attr_reader :country
     attr_reader :country_id
 
-    def initialize(country = 'de')
+    def initialize(country = GeoDB::DEFAULT_COUNTRY)
       @country     = country
-      @country_id  = GeoDB::DEFAULT_CONFIG['countries'].fetch(@country)
+      @country_id  = GeoDB::SUPPORTED_COUNTRIES.fetch(@country)
     end
 
     def self.province_by_zip_code(zip_code)
@@ -58,7 +58,7 @@ module GeoDB
 
     def city_by_zip_code(zip_code)
       text_type   = GeoDB::TEXT_DATA[:name]
-      layer       = GeoDB::DEFAULT_CONFIG['layer']
+      layer       = GeoDB::LAYER
       zip_id      = GeoDB::TEXT_DATA[:area_code]
       locale      = GeoDB::DEFAULT_CONFIG['locale']
 

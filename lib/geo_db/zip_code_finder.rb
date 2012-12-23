@@ -7,7 +7,7 @@ module GeoDB
 
     def initialize(country = GeoDB::DEFAULT_COUNTRY)
       @country     = country
-      @country_id  = GeoDB::DEFAULT_CONFIG['countries'].fetch(@country)
+      @country_id  = GeoDB::SUPPORTED_COUNTRIES.fetch(@country)
     end
 
     def find_zip_codes(loc_id)
