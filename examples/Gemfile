@@ -1,0 +1,7 @@
+source :rubygems
+
+gem 'geo_db', path: '../'
+
+gem 'sinatra', '~> 1.3.3'
+gem 'sinatra-contrib'
+gem 'slim'
